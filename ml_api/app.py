@@ -40,7 +40,7 @@ def data():
                 file_uploaded_name = os.path.join(app.config['UPLOAD_FOLDER'], f"{int(time.time())}_{filename}")
                 file.save(file_uploaded_name)
 
-    email = request.form['emailId'] if 'emailId' in request.form else 'manpreetignite@gmail.com'
+    email = request.form['emailId'] if 'emailId' in request.form else 'avishkadakia1996i@gmail.com'
     threaded_function(email, file_uploaded_name)
     resp_data = {'email': email, 'status': 'processing'}
 
